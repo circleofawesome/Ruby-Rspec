@@ -36,11 +36,24 @@ end
 #passes
 
 
-def first_word
-
+def first_word (sentence)
+result=sentence.split.first
 end
+#passes
 
 
-def titileize
-
+def titleize (word)
+    sentence=word.split
+    #return sentence
+    for i in 0..sentence.length-1 do
+        if sentence[i].length>4
+        sentence[i].capitalize!
+        end
+    end
+    sentence[0].capitalize!
+    sentence[-1].capitalize!
+    return sentence.join(' ')
 end
+#passes
+
+#whole program passes all tests
