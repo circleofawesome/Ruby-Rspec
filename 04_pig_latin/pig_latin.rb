@@ -10,7 +10,11 @@ def consonant (word)
     consList='bcdfghjklmnpqrstvwxyz'.split(//)
     vowelsList="aeiou".split(//)
     while consList.include?word[0] do
+        if word[0]=='q'
+            2.times do frontToEnd(word) end
+        else
         frontToEnd(word)
+        end
     end
 return word
 end
@@ -29,3 +33,4 @@ return word.join
 end
 
 #just testing here: translate('school')
+#passes all hard tests; needs to pass multiple words test 
