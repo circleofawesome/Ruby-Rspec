@@ -62,7 +62,7 @@ describe "#translate" do
 
   it "translates many words" do
     s = translate("the quick brown fox")
-    s.should == "ethay ickquay ownbray oxfay"
+    s.should == "ethay ickquay ownbray oxfay" 
   end
 
   # Test-driving bonus:

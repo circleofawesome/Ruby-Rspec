@@ -20,7 +20,7 @@ return word
 end
 
 
-def translate (word)
+def translateWord (word)
 vowels="aeiou".split(//)
 word=word.split(//)
 	if vowels.include?word[0]
@@ -32,5 +32,17 @@ word=word.split(//)
 return word.join
 end
 
-#just testing here: translate('school')
-#passes all hard tests; needs to pass multiple words test 
+
+
+def translate (phrase)
+phrase=phrase.split
+finalPhrase=Array.new
+    for i in 0..phrase.length-1 do
+        tempWord=phrase[i]
+        tempWord=translateWord(tempWord)
+        finalPhrase.push(tempWord)
+    end
+return finalPhrase.join(" ")
+end
+
+#passes ALL tests :D
