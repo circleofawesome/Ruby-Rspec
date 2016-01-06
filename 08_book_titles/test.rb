@@ -45,3 +45,14 @@ person.name
 ==================
 
 the, a, an, and, in, of, 
+
+
+sent='i am a man from nantucket who will always be the winner of this family'.split
+
+sent.each{|i|
+    unless i.chr=='w'
+        i.capitalize!
+    end
+}
+sent.join(' ')
+========================
