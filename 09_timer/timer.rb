@@ -15,6 +15,15 @@ class Timer
 			end
 			seconds=temp_seconds
 		end
-		total_time="#{hours}:#{minutes}:#{seconds}"
+		#total_time="#{hours}:#{minutes}:#{seconds}"
+		if minutes<10 and seconds<10
+			total_time="#{hours}:0#{minutes}:0#{seconds}"
+		elsif minutes<10 and seconds>=10
+			total_time="#{hours}:0#{minutes}:#{seconds}"
+		elsif minutes>=10 and seconds<10
+			total_time="#{hours}:#{minutes}:0#{seconds}"
+		elsif minutes>=10 and seconds>=10
+			total_time="#{hours}:#{minutes}:#{seconds}"
+		end
 	end
 end
