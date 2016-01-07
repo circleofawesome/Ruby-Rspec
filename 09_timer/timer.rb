@@ -12,6 +12,14 @@ class Timer
 			while temp_seconds>=60
 				temp_seconds=temp_seconds-60
 				minutes=minutes+1
+				if minutes>=60
+					temp_minutes=minutes
+					while temp_minutes>=60
+						temp_minutes=temp_minutes-60
+						hours=hours+1
+					end
+				minutes=temp_minutes	
+				end
 			end
 			seconds=temp_seconds
 		end
@@ -25,6 +33,12 @@ class Timer
     else
         sec_string=seconds
     end
-    total_time="#{hours}:#{min_string}:#{sec_string}"
+    if hours<10
+        hour_string='0'+"#{hours}"
+    else
+    	hour_string=hours
+    end
+    total_time="#{hour_string}:#{min_string}:#{sec_string}"
 	end
 end
+#passes all tests :)
